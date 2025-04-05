@@ -1,23 +1,23 @@
 var userIcon = L.icon({
-    iconUrl: '/icon/user.png',  // Path to your custom image
+    iconUrl: './icon/user.png',  // Path to your custom image
     iconSize: [40, 40],         // Width, Height of the icon
     iconAnchor: [20, 40],       // Point of the icon that corresponds to marker location
     popupAnchor: [0, -40]       // Where the popup appears relative to the icon
 });
 var parkingIcon = L.icon({
-    iconUrl: '/icon/parking.png',  // Path to your custom image
+    iconUrl: './icon/parking.png',  // Path to your custom image
     iconSize: [40, 40],         // Width, Height of the icon
     iconAnchor: [20, 40],       // Point of the icon that corresponds to marker location
     popupAnchor: [0, -40]       // Where the popup appears relative to the icon
 });
 var restaurantIcon = L.icon({
-    iconUrl: '/icon/restaurant.png',  // Path to your custom image
+    iconUrl: './icon/restaurant.png',  // Path to your custom image
     iconSize: [40, 40],         // Width, Height of the icon
     iconAnchor: [20, 40],       // Point of the icon that corresponds to marker location
     popupAnchor: [0, -40]       // Where the popup appears relative to the icon
 });
 var hotelIcon = L.icon({
-    iconUrl: '/icon/hotel.png',  // Path to your custom image
+    iconUrl: './icon/hotel.png',  // Path to your custom image
     iconSize: [40, 40],         // Width, Height of the icon
     iconAnchor: [20, 40],       // Point of the icon that corresponds to marker location
     popupAnchor: [0, -40]       // Where the popup appears relative to the icon
