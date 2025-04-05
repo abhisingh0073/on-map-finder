@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+   
+    <title>Document</title>
+    <!-- <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script> -->
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+<body>
+    <header class="header container">
+        <a href="#" class="heading-name">OnMap</a>
+        <ul class="header-feature">
+            <li><a href="#" class="parking-spot menu"  onclick="generateParkingList()">Parking Spot</a></li>
+            <li><a href="#" class="restaurant menu" onclick="generateRestaurantList()">Restaurant</a></li>
+            <li><a href="#" class="hotels menu"  onclick="generateHotelList()">Hotels</a></li>
+            <i class="bi bi-brightness-high bright-dark" title="light-dark"></i>
+        </ul>
+    </header>
+    <div class="main-content container">
+        <div class="map-container">
+                <div id="map"></div>
+        </div>
+        <div class="controls-container">
+<!-- parking-spot -->
+            <div class="parking-spot-container">
+                <div class="parking-spot-heading">
+                  <h1 >Parking spot</h1>
+                </div>
+                <div class="parking-spot-list">
+            
+                 </div>
+
+
+<div class="parking-booking-section">
+        <div class="parking-booking-detail">
+            <div class="personal-detail-section">
+                 <label for="name">Your Name</label>
+                 <input type="text" name="name" placeholder="Enter Your Name">
+                 <label for="vehicle-number">Vehicle Number</label>
+                 <input type="text" id="vehicle-number" name="vehicle_number" required placeholder="Enter your vehicle number">
+         </div>
+     
+             <div class="vehicle-info">
+                 <label for="vehicle-type">Vehicle Type</label>
+                 <select id="vehicle-type" name="vehicle_type" required>
+                    <option value="">Select</option>
+                     <option value="two_wheeler">Two Wheeler</option>
+                     <option value="four_wheeler">Four Wheeler</option>
+                 </select>
+             </div>
+     
+     
+             <div class="duration-section">
+                     <label for="booking-duration">Booking Duration (in hours)</label>
+                         <select id="booking-duration" name="booking_duration" required onchange="updatePrice()">
+                             <option value="1">1 Hour - ₹20</option>
+                             <option value="2">2 Hours - ₹40</option>
+                         </select>
+              </div>
+     
+             <div class="price-info">
+                 Total Price: ₹<span id="price">20</span>
+             </div>
+        </div>
+        
+     
+             <button type="submit" class="pay-button">Pay</button>
+     </div>
+
+
+
+ </div>
+       
+
+             
+
+
+            <!-- restaurant -->
+
+           <div class="restaurant-container" > 
+                <div class="restaurant-heading">
+                  <h1>Restaurant</h1>
+                </div>
+             <div class="restaurant-list">
+              
+             </div>
+
+             <div class="final-pay-container">
+                <div class="menu-quantity">
+                    <p>Quantity:</p>
+                    <div class="quantity-button">
+                        <button class="subtract-button">-</button>
+                        <p class="quantity-display">1</p>
+                        <button class="addition-button">+</button>
+                    </div>
+                </div>
+                <div class="total-amount">
+                    Total Amount: <div class="current-amount"></div>
+                </div>
+                
+                <button class="menu-pay">Pay</button>
+               
+             </div>
+
+
+            </div>
+
+
+           
+
+             <!-- hotels -->
+
+             <div class="hotels-container" > 
+                <div class="hotels-heading">
+                    <h1 >Hotels</h1>
+                    <div class="hotelBookSection">
+                        
+                    </div>
+                </div>
+                <div class="hotels-list">
+               
+               </div>
+               
+            </div> 
+
+<!-- Overlay to darken the background -->
+
+     
+
+
+
+
+        </div>
+    </div>
+
+
+            
+
+
+
+
+
+
+   
+    
+
+
+
+   <!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+   <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+   <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script> -->
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+   <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+     <script src="hotel.js"></script>
+     <script src="restaurant.js"></script>
+     <script src="parking.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
